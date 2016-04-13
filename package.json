@@ -4,7 +4,7 @@
     "description": "Automatic dropdown generation for Twitter Bootstrap navigations depending on the screen width.",
     "main": "src/DropDown.js",
     "scripts": {
-        "test": "grunt test && node test/node-index.js"
+        "test": "grunt test"
     },
     "repository": {
         "type": "git",
