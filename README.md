@@ -1,5 +1,7 @@
 # jQuery responsive Bootstrap dropdown plugin
 
+[![Build Status](https://travis-ci.org/astehlik/bootstrap-responsive-dropdown.svg?branch=master)](https://travis-ci.org/astehlik/bootstrap-responsive-dropdown)
+
 This is a jQuery plugin for generating a dropdown menu depending on the current
 screen width and the number of items in the navigation.
 
