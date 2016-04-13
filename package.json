@@ -1,0 +1,35 @@
+{
+    "name": "bootstrap-responsive-dropdown",
+    "version": "0.0.1",
+    "description": "Automatic dropdown generation for Twitter Bootstrap navigations depending on the screen width.",
+    "main": "src/DropDown.js",
+    "scripts": {
+        "test": "grunt test && node test/node-index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/astehlik/bootstrap-responsive-dropdown.git"
+    },
+    "keywords": [
+        "bootstrap",
+        "responsive",
+        "navigation",
+        "dropdown"
+    ],
+    "author": "Alexander Stehlik",
+    "license": "GPL-3.0+",
+    "bugs": {
+        "url": "https://github.com/astehlik/bootstrap-responsive-dropdown/issues"
+    },
+    "homepage": "https://github.com/astehlik/bootstrap-responsive-dropdown#readme",
+    "dependencies": {
+        "bootstrap": "^3.3.6",
+        "jquery": "^2.2.3"
+    },
+    "devDependencies": {
+        "grunt": "~1.0.1",
+        "grunt-contrib-jshint": "~1.0.0",
+        "grunt-contrib-qunit": "~1.1.0",
+        "qunitjs": "~1.23.1"
+    }
+}
