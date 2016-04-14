@@ -30,4 +30,11 @@ QUnit.test('dropdownElementsAreAdjustedIfWindowSizeChanges', 2, function (assert
     assert.equal(this.mainContainer.find('.dropdown-menu li').length, 1);
 });
 
-
+QUnit.test('dropdownIsInitializedOnWindowResize', 2, function (assert) {
+    this.mainContainer.width(1000);
+    this.navbar.bsResponsiveDropdown();
+    assert.equal(this.mainContainer.find('.dropdown-menu').length, 0);
+    this.mainContainer.width(400);
+    $(window).trigger('resize');
+    assert.equal(this.mainContainer.find('.dropdown-menu li').length, 1);
+});

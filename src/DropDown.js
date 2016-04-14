@@ -161,6 +161,15 @@
          * Rebuilds the menu on window resize.
          */
         var handleWindowResize = function () {
+            restoreOriginalMenu();
+            destroyDropdownSubMenu();
+            moveMenuItemsToDropdown();
+        };
+
+        /**
+         * Appends the menu items that were moved do the dropdown back to the original menu.
+         */
+        var restoreOriginalMenu = function() {
             if ($dropdownElements.length === 0) {
                 return;
             }
@@ -169,9 +178,6 @@
                 $menu.append(dropdownElement);
                 dropdownElement = $dropdownElements.shift();
             }
-            $dropdownElements = [];
-            destroyDropdownSubMenu();
-            moveMenuItemsToDropdown();
         };
 
         /**
