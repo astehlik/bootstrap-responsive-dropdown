@@ -1,0 +1,24 @@
+{
+    "name": "bootstrap-responsive-dropdown",
+    "description": "Automatic dropdown generation for Twitter Bootstrap navigations depending on the screen width.",
+    "keywords": [
+        "bootstrap",
+        "responsive",
+        "navigation",
+        "dropdown"
+    ],
+    "homepage": "https://github.com/astehlik/bootstrap-responsive-dropdown#readme",
+    "license": "GPL-3.0+",
+    "moduleType": "globals",
+    "main": [
+        "src/DropDown.js"
+    ],
+    "ignore": [
+        "/.*",
+        "test"
+    ],
+    "dependencies": {
+        "jquery": "^2.2.3",
+        "bootstrap": "^3.3.6"
+    }
+}
