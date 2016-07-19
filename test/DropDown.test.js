@@ -1,4 +1,8 @@
 
+var responsiveDropdownOptions = {
+    navbarMenuSelector: '.responsive-dropdown'
+};
+
 QUnit.module('dropDown', {
     beforeEach: function() {
         var testarea = $('#testarea');
@@ -11,19 +15,19 @@ QUnit.module('dropDown', {
 
 QUnit.test('noDropdownIsAddedIfWidthIsSufficient', 1, function (assert) {
     this.mainContainer.width(1000);
-    this.navbar.bsResponsiveDropdown();
+    this.navbar.bsResponsiveDropdown(responsiveDropdownOptions);
     assert.equal(this.mainContainer.find('.dropdown-menu').length, 0);
 });
 
 QUnit.test('dropdownContainsExpectedNumberOfElementsIfScreenWidhtIsTooSmall', 1, function (assert) {
     this.mainContainer.width(200);
-    this.navbar.bsResponsiveDropdown();
+    this.navbar.bsResponsiveDropdown(responsiveDropdownOptions);
     assert.equal(this.mainContainer.find('.dropdown-menu li').length, 4);
 });
 
 QUnit.test('dropdownElementsAreAdjustedIfWindowSizeChanges', 2, function (assert) {
     this.mainContainer.width(200);
-    this.navbar.bsResponsiveDropdown();
+    this.navbar.bsResponsiveDropdown(responsiveDropdownOptions);
     assert.equal(this.mainContainer.find('.dropdown-menu li').length, 4);
     this.mainContainer.width(400);
     $(window).trigger('resize');
@@ -32,7 +36,7 @@ QUnit.test('dropdownElementsAreAdjustedIfWindowSizeChanges', 2, function (assert
 
 QUnit.test('dropdownIsInitializedOnWindowResize', 2, function (assert) {
     this.mainContainer.width(1000);
-    this.navbar.bsResponsiveDropdown();
+    this.navbar.bsResponsiveDropdown(responsiveDropdownOptions);
     assert.equal(this.mainContainer.find('.dropdown-menu').length, 0);
     this.mainContainer.width(400);
     $(window).trigger('resize');

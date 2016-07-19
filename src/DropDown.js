@@ -4,7 +4,8 @@
         rightMargin: 80,
         dropdownMenuItem: '<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><span class="caret"></span></a></li>',
         dropdownMenuItemText: '... ',
-        dropdownSubMenu: '<ul class="dropdown-menu pull-right" />'
+        dropdownSubMenu: '<ul class="dropdown-menu pull-right" />',
+        navbarMenuSelector: '.navbar-nav'
     };
 
     /**
@@ -22,18 +23,18 @@
         var $navbar = $(element);
 
         /**
-         * jQuery reference to the menu inside the navbar of which the items are moved to the dropdown.
-         *
-         * @type {jQuery}
-         */
-        var $menu = $navbar.find('.navbar-nav');
-
-        /**
          * The plugin settings, see also defaultSetting at the top.
          *
          * @type {object}
          */
         var $settings = $.extend(defaultSettings, options);
+
+        /**
+         * jQuery reference to the menu inside the navbar of which the items are moved to the dropdown.
+         *
+         * @type {jQuery}
+         */
+        var $menu = $navbar.find($settings.navbarMenuSelector);
 
         /**
          * Array containing jQuery references to the menu items that were moved to the dropdown.
